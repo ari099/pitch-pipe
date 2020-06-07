@@ -1,20 +1,15 @@
-.App {
+.Pitch-Pipe {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Pitch-Pipe-container {
+  height: 500px;
+  width: 500px;
+  /* border: 2px solid white; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.Pitch-Pipe-header {
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,13 +21,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

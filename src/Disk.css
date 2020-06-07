@@ -1,0 +1,16 @@
+.Disk-circle {
+   fill: black;
+   stroke: white;
+   stroke-width: 3px;
+   cursor: grab;
+}
+.Disk-circle:active {
+   cursor: grabbing;
+}
+
+.Disk-note-text {
+   fill: white;
+   font-family: Nilland;
+   font-size: 25pt;
+   font-weight: bolder;
+}

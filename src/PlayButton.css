@@ -1,0 +1,10 @@
+.PlayButton-button {
+   fill: white;
+   cursor: pointer;
+}
+.PlayButton-button:hover {
+   fill: #AAA;
+}
+.PlayButton-button:active {
+   fill: gray;
+}
