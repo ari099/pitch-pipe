@@ -13,7 +13,7 @@ function App() {
         <svg className="Pitch-Pipe-container">
           <Disk x={250} y={250} />
           <PlayButton x={250} y={250} />
-          <Pointer x={250} y={467.5} currentNote={note} />
+          <Pointer x={250} y={467.5} />
         </svg>
       </header>
     </div>
