@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import PlayButton from './PlayButton';
 import './Disk.css';
 
+/**
+ * Disk React Componennt
+ */
 const Disk = props => {
    const [rotateDegrees, setRotateDegrees] = useState(0);
    const [posX, setPosX] = useState(0);
@@ -10,7 +14,7 @@ const Disk = props => {
       x: 250,
       y: 250
    };
-   const radius = 125;
+   const radius = 130;
    const styles = {
       transformOrigin: `${center.x}px ${center.y}px`,
       transform : `rotate(${rotateDegrees}deg)`
@@ -18,15 +22,15 @@ const Disk = props => {
 
    const handleMouseUp = e => {
       setDown(false);
-      setRotateDegrees(nearestMultiple(rotateDegrees, 3));
+      setRotateDegrees(Math.ceil(rotateDegrees / 30) * 30);
       // console.log(rotateDegrees);
    }
 
    const handleMouseMove = e => {
       if(down) {
-         setPosX(e.clientX);
-         setPosY(e.clientY);
-         setRotateDegrees(Math.round(Math.atan2(posY - center.y, posX - center.x) * 180 / Math.PI + 90));
+         setPosX(Math.round(e.clientX - 500));
+         setPosY(Math.round(e.clientY));
+         setRotateDegrees(Math.round(Math.atan2(posY - center.y, posX - center.x) * (180 / Math.PI) + 180));
       }
    }
 
@@ -40,13 +44,6 @@ const Disk = props => {
    const degrees = (value, limit) => {
       let quotient = 360 / limit;
       return Math.round(quotient * value);
-   }
-
-   const nearestMultiple = (x, n) => {
-      if(x > n) return x;
-      n = n + Math.round(x / 2);
-      n = n - (n % x);
-      return n
    }
 
    return (
@@ -80,6 +77,9 @@ const Disk = props => {
             style={styles} x={coordinate(300).x} y={coordinate(300).y}>*</text>
          <text className="Disk-note-text" textAnchor="middle" alignmentBaseline="middle" 
             style={styles} x={coordinate(330).x} y={coordinate(330).y}>B</text>
+         <PlayButton x={250} y={250} note={props.note} />
+         <text className="Disk-rotate-degrees" textAnchor="middle" alignmentBaseline="middle"
+            x={center.x} y={center.y}>{rotateDegrees}</text>
       </>
    );
 };

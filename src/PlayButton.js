@@ -2,6 +2,10 @@ import React from 'react';
 import Tone from 'tone';
 import './PlayButton.css';
 
+/**
+ * PlayButton React Component
+ * @param props 
+ */
 const PlayButton = props => {
    const synth = new Tone.Synth();
    synth.envelope.attack = 0.01;
@@ -15,9 +19,8 @@ const PlayButton = props => {
    synth.toMaster();
 
    const click = e => {
-      // complete this handler....
       // PLAN: Use Tone JS to play a note
-      synth.triggerAttackRelease("C4", "32n");
+      synth.triggerAttackRelease(`${props.note}4`, "32n");
    }
 
    return <circle className="PlayButton-button" onClick={click} cx={props.x} cy={props.y} r={50} />;

@@ -15,3 +15,11 @@
    font-weight: bolder;
    pointer-events: none;
 }
+
+.Disk-rotate-degrees {
+   fill: black;
+   font-family: Nilland;
+   font-size: 25pt;
+   font-weight: bolder;
+   pointer-events: none;
+}
