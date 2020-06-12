@@ -78,8 +78,8 @@ const Disk = props => {
          <text className="Disk-note-text" textAnchor="middle" alignmentBaseline="middle" 
             style={styles} x={coordinate(330).x} y={coordinate(330).y}>B</text>
          <PlayButton x={250} y={250} note={props.note} />
-         <text className="Disk-rotate-degrees" textAnchor="middle" alignmentBaseline="middle"
-            x={center.x} y={center.y}>{rotateDegrees}</text>
+         {/* <text className="Disk-rotate-degrees" textAnchor="middle" alignmentBaseline="middle"
+            x={center.x} y={center.y}>{rotateDegrees}</text> */}
       </>
    );
 };

@@ -23,7 +23,8 @@ const PlayButton = props => {
       synth.triggerAttackRelease(`${props.note}4`, "32n");
    }
 
-   return <circle className="PlayButton-button" onClick={click} cx={props.x} cy={props.y} r={50} />;
+   return <circle className="PlayButton-button"
+            onClick={click} cx={props.x} cy={props.y} r={50} />;
 };
 
 export default PlayButton;
