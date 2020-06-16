@@ -10,6 +10,21 @@ const Disk = props => {
    const [posX, setPosX] = useState(0);
    const [posY, setPosY] = useState(0);
    const [down, setDown] = useState(false);
+   const notes = {
+      0: "C",
+      30: "C#",
+      60: "D",
+      90: "D#",
+      120: "E",
+      150: "F",
+      180: "F#",
+      210: "G",
+      240: "G#",
+      270: "A",
+      300: "A#",
+      330: "B",
+      360: "C"
+   };
    const center = {
       x: 250,
       y: 250
@@ -23,7 +38,7 @@ const Disk = props => {
    const handleMouseUp = e => {
       setDown(false);
       setRotateDegrees(Math.ceil(rotateDegrees / 30) * 30);
-      // console.log(rotateDegrees);
+      props.setNote(notes[Math.ceil(rotateDegrees / 30) * 30]);
    }
 
    const handleMouseMove = e => {
