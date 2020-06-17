@@ -1,5 +1,5 @@
 .Disk-circle {
-   fill: black;
+   fill: #046;
    stroke: white;
    stroke-width: 3px;
    cursor: grab;
@@ -17,7 +17,7 @@
 }
 
 .Disk-rotate-degrees {
-   fill: black;
+   fill: #046;
    font-family: Nilland;
    font-size: 25pt;
    font-weight: bolder;

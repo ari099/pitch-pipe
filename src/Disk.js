@@ -43,8 +43,21 @@ const Disk = props => {
 
    const handleMouseMove = e => {
       if(down) {
-         setPosX(Math.round(e.clientX - 500));
-         setPosY(Math.round(e.clientY));
+         // Getting the SVG container element
+         let svg = document.getElementsByClassName("Pitch-Pipe-container")[0];
+         
+         // Creating an SVGPoint for future math
+         let pt = svg.createSVGPoint();
+
+         // Get the point in global SVG space
+         pt.x = e.clientX;
+         pt.y = e.clientY;
+         let result = pt.matrixTransform(svg.getScreenCTM().inverse());
+         
+         // Setting the positions
+         setPosX(Math.round(result.x));
+         setPosY(Math.round(result.y));
+         // console.log(`${posX} ${posY}`);
          setRotateDegrees(Math.round(Math.atan2(posY - center.y, posX - center.x) * (180 / Math.PI) + 180));
       }
    }

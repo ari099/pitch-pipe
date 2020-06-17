@@ -21,7 +21,7 @@ const Pointer = props => {
    const click = e => {
       // complete this handler....
       // PLAN: Use Tone JS to play a note
-      synth.triggerAttackRelease("C4", "32n");
+      synth.triggerAttackRelease(`${props.note}4`, "32n");
    }
 
    return (

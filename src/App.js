@@ -15,7 +15,7 @@ function App() {
       <header className="Pitch-Pipe-header">
         <svg className="Pitch-Pipe-container">
           <Disk x={250} y={250} note={note} setNote={setNote} />
-          <Pointer x={250} y={467.5} />
+          <Pointer x={250} y={467.5} note={note} />
         </svg>
       </header>
     </div>
