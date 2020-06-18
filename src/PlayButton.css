@@ -1,10 +1,12 @@
 .PlayButton-button {
    fill: white;
+   stroke: white;
+   stroke-width: 3px;
    cursor: pointer;
 }
 .PlayButton-button:hover {
-   fill: #AAA;
+   fill: #6499b4;
 }
 .PlayButton-button:active {
-   fill: gray;
+   fill: #44768f;
 }

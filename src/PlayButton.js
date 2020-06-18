@@ -7,6 +7,7 @@ import './PlayButton.css';
  * @param props 
  */
 const PlayButton = props => {
+   // Tone Sound Synthesizer....
    const synth = new Tone.Synth();
    synth.envelope.attack = 0.01;
    synth.envelope.attackCurve = "linear";
@@ -19,7 +20,7 @@ const PlayButton = props => {
    synth.toMaster();
 
    const click = e => {
-      // PLAN: Use Tone JS to play a note
+      // Use Tone JS to play a note
       synth.triggerAttackRelease(`${props.note}4`, "32n");
    }
 

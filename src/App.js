@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Disk from './Disk';
 // import PlayButton from './PlayButton';
@@ -8,7 +7,7 @@ import Pointer from './Pointer';
 /**
  * Main Application React Component
  */
-function App() {
+const App = () => {
   const [note, setNote] = useState("C");
   return (
     <div className="Pitch-Pipe">
